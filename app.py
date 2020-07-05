@@ -1,12 +1,10 @@
 import flask
-import pickle
 import pandas as pd
 import xgboost as xgb
 import numpy as np
 import joblib
-# Use pickle to load in the pre-trained model.
-#with open(f'model/xgb.json', 'rb') as f:
-    #model = xgb.Booster({'nthread':4})
+
+
 model = joblib.load('model/xgb.json')
 app = flask.Flask(__name__, template_folder='templates')
 
